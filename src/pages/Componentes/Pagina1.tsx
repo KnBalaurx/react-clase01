@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 
 
 
+
 export const Pagina1= () => {
     const [nombre, setNombre] = useState('Joselito')
     const [apellido, setApellido] = useState('')

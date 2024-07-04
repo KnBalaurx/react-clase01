@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Button } from 'react-bootstrap';
+
 
 export const Pagina2 = () => {
     const [num1, setNum1] = useState(0)

@@ -9,6 +9,7 @@ export default function Home() {
       <nav>
         <Link href={"./Componentes/Pagina1"}>Pagina1</Link>
         <Link href={"./Componentes/Pagina2"}>Calculadora</Link>
+        <Link href={"./Componentes/Pagina3"}>Pagina3</Link>
       </nav>
 
       <p>Hola</p>
