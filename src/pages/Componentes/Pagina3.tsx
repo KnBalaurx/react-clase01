@@ -1,16 +1,11 @@
+import { registrarPersona } from '@/Firebase/promesas';
+import { Persona } from '@/interfaces/iPersonas';
 import { set } from 'firebase/database';
 import React, { useState } from 'react'
 import { Form } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 
-interface Persona{
-    nombre:string,
-    apellido:string,
-    rut:string,
-    edad:number,
-    fechaNacimiento: string,
-    correo: string
-}
+
 const initialState:Persona = {
     apellido:"",
     correo:"",
@@ -31,6 +26,15 @@ export const Pagina3 = () => {
         setPersona({...persona,[name]:value})
     }
 
+    const registrar = ()=>{
+        registrarPersona(persona).then(()=>{
+            alert('se logro registrar')
+        }).catch((e)=>{
+            console.log(e);
+            alert('algo ocurrio')
+        })
+
+    }
 
   return (
     <>
@@ -78,7 +82,7 @@ export const Pagina3 = () => {
             <Form.Text></Form.Text>
         </Form.Group>
 
-        <Button type='button' variant='success'>Registrar</Button>
+        <Button type='button' variant='success' onClick={registrar}>Registrar</Button>
 
     </Form>
     </>

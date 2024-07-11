@@ -8,6 +8,8 @@ npm install -g npm@10.8.1
 
 npm install
 
+npm install firebase
+
 npx next dev //abrir pagina
 
 √ What is your project named? ... frontend
